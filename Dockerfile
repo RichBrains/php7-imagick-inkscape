@@ -24,7 +24,8 @@ RUN docker-php-ext-configure pdo_mysql && \
     docker-php-ext-configure sockets && \
     docker-php-ext-configure mcrypt
 
-
+RUN docker-php-ext-install pdo_mysql opcache exif gd sockets mcrypt && \
+    docker-php-source delete
 
 
 
