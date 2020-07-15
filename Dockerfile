@@ -1,2 +1,3 @@
 FROM circleci/node:lts-browsers
-WORKDIR /tmp
+
+USER root
