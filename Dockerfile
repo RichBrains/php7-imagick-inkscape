@@ -10,6 +10,9 @@ RUN apk add --no-cache --virtual .ext-deps \
         npm \
         git
 
+RUN docker-php-ext-configure gd 
+RUN docker-php-ext-install gd
+
 COPY php-fpm.conf  /etc/php7/php-fpm.conf
 
 RUN ln -s /usr/bin/php7 /usr/bin/php
